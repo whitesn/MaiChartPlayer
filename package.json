@@ -1,0 +1,9 @@
+{
+  "name":    "MaiChartPlayer",
+  "version": "0.1.0",
+  "description": "A Chart Player for Mai (Arcade Game)",
+  "main":    "main.js",
+  "scripts": {
+    "start": "electron ."
+  }
+}
