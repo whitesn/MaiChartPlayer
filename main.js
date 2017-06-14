@@ -1,15 +1,17 @@
-const {app, BrowserWindow} = require('electron');
+const {app, shell, BrowserWindow} = require('electron');
 
-let mainWindow;
+let win;
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({
-      height: 600,
-      width: 1366
-  });
+    win = new BrowserWindow({
+        width: 750,
+        height: 750,
+        backgroundColor: '#2e2c29'
+    });
 
-  mainWindow.loadURL('file://' + __dirname + '/index.html');
-  
-  
+    win.once('ready-to-show', () => {
+        win.show()
+    });
+
+    win.loadURL('file://' + __dirname + '/index.html');
 });
-
